@@ -1,0 +1,10 @@
+[Unit]
+Description=Put the BigLinux live session keyring in /etc/pacman.d/gnupg
+After=pacman-init.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/big-keyring-livecd.sh
+
+[Install]
+WantedBy=multi-user.target
